@@ -271,4 +271,6 @@ return {
   },
   { "lervag/vimtex" },
   { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+  -- Markdown, build by hand
+  { "iamcco/markdown-preview.nvim" },
 }
