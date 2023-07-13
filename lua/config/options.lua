@@ -5,6 +5,8 @@ vim.wo.cursorline = true
 vim.cmd("au TermOpen * setlocal nospell")
 vim.cmd("set spell")
 vim.g.vim_svelte_plugin_load_full_syntax = 1
+vim.g.mkdp_auto_start = 1
+vim.g.mkdp_auto_close = 1
 
 local o = vim.opt
 
