@@ -7,6 +7,10 @@ keymap("n", "<C-h>", ":bn<CR>", opt)
 keymap("n", "<C-l>", ":bp<CR>", opt)
 keymap("n", "<C-x>", ":bd<CR>", opt)
 
+-- remap to defaults
+keymap("n", "<S-h>", "H", opt)
+keymap("n", "<S-l>", "L", opt)
+
 -- mistakes
 cmd(":command! Q q")
 cmd(":command! W w")
