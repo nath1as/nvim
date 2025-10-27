@@ -38,4 +38,8 @@ require("lazy").setup({
       },
     },
   },
+  experimental = {
+    check_rtp = false,
+    check_rtp_message = false,
+  },
 })

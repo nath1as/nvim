@@ -75,12 +75,12 @@ return {
   },
   -- Use <tab> for completion and snippets (supertab)
   -- first: disable default <tab> and <s-tab> behavior in LuaSnip
-  {
-    "L3MON4D3/LuaSnip",
-    keys = function()
-      return {}
-    end,
-  },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   keys = function()
+  --     return {}
+  --   end,
+  -- },
   -- then: setup supertab in cmp
   {
     "hrsh7th/nvim-cmp",
@@ -200,33 +200,34 @@ return {
     },
   },
   { "xuhdev/vim-latex-live-preview" },
-  {
-    "lervag/vimtex",
-    lazy = false,
-    config = function()
-      vim.api.nvim_create_autocmd({ "FileType" }, {
-        group = vim.api.nvim_create_augroup("lazyvim_vimtex_conceal", { clear = true }),
-        pattern = { "bib", "tex" },
-        callback = function()
-          vim.wo.conceallevel = 0
-        end,
-      })
-      vim.g.vimtex_mappings_disable = { ["n"] = { "K" } }
-      vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
-
-      vim.g.vimtex_view_method = "zathura"
-      vim.g.vimtex_view_skim_sync = 1
-      vim.g.vimtex_view_skim_activate = 1
-      vim.g.vimtex_view_skim_reading_bar = 1
-      vim.g.vimtex_compiler_method = "latexrun"
-      vim.g.vimtex_compiler_latexmk = {
-        aux_dir = "./aux",
-        out_dir = "./out",
-      }
-    end,
-  },
+  -- {
+  --   "lervag/vimtex",
+  --   lazy = false,
+  --   config = function()
+  --     vim.api.nvim_create_autocmd({ "FileType" }, {
+  --       group = vim.api.nvim_create_augroup("lazyvim_vimtex_conceal", { clear = true }),
+  --       pattern = { "bib", "tex" },
+  --       callback = function()
+  --         vim.wo.conceallevel = 0
+  --       end,
+  --     })
+  --     vim.g.vimtex_mappings_disable = { ["n"] = { "K" } }
+  --     vim.g.vimtex_quickfix_method = vim.fn.executable("pplatex") == 1 and "pplatex" or "latexlog"
+  --
+  --     vim.g.vimtex_view_method = "zathura"
+  --     vim.g.vimtex_view_skim_sync = 1
+  --     vim.g.vimtex_view_skim_activate = 1
+  --     vim.g.vimtex_view_skim_reading_bar = 1
+  --     vim.g.vimtex_compiler_method = "latexrun"
+  --     vim.g.vimtex_compiler_latexmk = {
+  --       aux_dir = "./aux",
+  --       out_dir = "./out",
+  --     }
+  --   end,
+  -- },
   {
     "OXY2DEV/markview.nvim",
+    lazy = true,
   },
   {
     "rcarriga/nvim-notify",
